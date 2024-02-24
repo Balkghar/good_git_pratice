@@ -47,8 +47,10 @@ git commit -m "feat: basic authentification"
 ... (do some coding)
 git add [file to commit]
 git commit -m "feat: add MFA"
+git push
 # go on github, open a PR with a meaningfull comment, let your mate approved and then merge
-git checkout main
+git switch master
+git pull
 git branch feature-blog
 git switch feature-blog
 ... (do some coding)
@@ -57,14 +59,17 @@ git commit -m "feat: basic blog"
 ... (do some coding)
 git add [file to commit]
 git commit -m "feat: add pictures to blog"
+git push
 # go on github, open a PR with a meaningfull comment, let your mate approved and then merge
-git checkout main
+git switch master
+git pull
 git branch refactor-authentification
 git switch refactor-authentification
 ... (do some coding)
 git add [file to commit]
 git commit -m "rfr: of the code of authentification"
-# go on github, open a PR with a meaningfull comment, let your mate approved and then merge
-git checkout main
+git push
 ```
+
+![git_workflow](./pictures/git_workflow.jpg)
 
