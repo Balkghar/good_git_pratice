@@ -11,6 +11,7 @@ When working on your project, you need to create a branch with the good term:
 - `fix`:          when making a fix. Example: `fix-password-reset`
 - `test`:         For branches where new tests are being developed. Example: `test-user-authentication`
 - `release`:      For release branches. Example: `release-v1.0.0`
+- `refactor`: 	When making a refactor to the code
 
 ## commit
 
@@ -37,17 +38,33 @@ When you are finised with the work on your branch, you do a PR on the main, make
 
 ## Example
 
-```mermaid
----
-title: Example of good git pratice
----
-%%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
-gitGraph TB:
-   commit id: "creation of the repository"
-   branch feature-authentification
-   checkout feature-authentification
-   commit id: "feat: add basic authentification"
-   commit id: "feat: add MFA"
-   checkout main
-   merge feature-authentification
+```bash
+git branch feature-authentification
+git switch feature-authentification
+... (do some coding)
+git add [file to commit]
+git commit -m "feat: basic authentification"
+... (do some coding)
+git add [file to commit]
+git commit -m "feat: add MFA"
+# go on github, open a PR with a meaningfull comment, let your mate approved and then merge
+git checkout main
+git branch feature-blog
+git switch feature-blog
+... (do some coding)
+git add [file to commit]
+git commit -m "feat: basic blog"
+... (do some coding)
+git add [file to commit]
+git commit -m "feat: add pictures to blog"
+# go on github, open a PR with a meaningfull comment, let your mate approved and then merge
+git checkout main
+git branch refactor-authentification
+git switch refactor-authentification
+... (do some coding)
+git add [file to commit]
+git commit -m "rfr: of the code of authentification"
+# go on github, open a PR with a meaningfull comment, let your mate approved and then merge
+git checkout main
 ```
+
